@@ -1,5 +1,5 @@
-'use strict';
 
+'use strict';
 var options = {
   enableHighAccuracy: true,
   timeout: 5000,
