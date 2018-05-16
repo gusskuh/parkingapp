@@ -32,10 +32,10 @@ function getCurrPos(){
 
 getCurrPos();
 
-setTimeout(() => {
+// setTimeout(() => {
 
-    initMap();
-}, 2000)
+//     initMap();
+// }, 500)
 
 
 
