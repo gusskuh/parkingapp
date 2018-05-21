@@ -44,28 +44,30 @@ var x = 0;
 
 
 var service = new google.maps.DistanceMatrixService();
-// setInterval(function() {
-//   navigator.geolocation.getCurrentPosition(function(pos, error, options) {
-//     let crd = pos.coords;
-//     // var marker = new google.maps.Marker({
-//       //   position: {lat: crd.latitude, lng: crd.longitude},
-//       //   map: map,
-//       //   title: 'Hello World!'
-//       // });
+setInterval(function() {
+  x += 2;
+  document.querySelector('.userStatus2').innerHTML=x
+  // navigator.geolocation.getCurrentPosition(function(pos, error, options) {
+  //   let crd = pos.coords;
+    // var marker = new google.maps.Marker({
+      //   position: {lat: crd.latitude, lng: crd.longitude},
+      //   map: map,
+      //   title: 'Hello World!'
+      // });
       
-//       origin1 = destinationB;
-//       destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
+    //   origin1 = destinationB;
+    //   destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
       
-//       service.getDistanceMatrix(
-//         {
-//           origins: [origin1],
-//           destinations: [destinationB],
-//           travelMode: "DRIVING"
-//         },
-//         callback
-//       );
-//     });
-//   }, 2000);
+    //   service.getDistanceMatrix(
+    //     {
+    //       origins: [origin1],
+    //       destinations: [destinationB],
+    //       travelMode: "DRIVING"
+    //     },
+    //     callback
+    //   );
+    // });
+  }, 2000);
 
 // function callback(response, status) {
 //   if (status == "OK") {
