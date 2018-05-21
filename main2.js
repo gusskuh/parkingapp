@@ -32,10 +32,10 @@ function getCurrPos(){
 
 getCurrPos();
 
-// setTimeout(() => {
+setTimeout(() => {
 
-//     initMap();
-// }, 500)
+    initMap();
+}, 5000)
 
 
 
@@ -50,11 +50,11 @@ function initMap() {
   });
 
 
-    map.setCenter({ lat: gCurrPos.latitude, lng: gCurrPos.longitude });
-    new google.maps.Marker({
-      position: { lat: gCurrPos.latitude, lng: gCurrPos.longitude },
-      map: map
-    });
+    // map.setCenter({ lat: gCurrPos.latitude, lng: gCurrPos.longitude });
+    // new google.maps.Marker({
+    //   position: { lat: gCurrPos.latitude, lng: gCurrPos.longitude },
+    //   map: map
+    // });
   
 }
 

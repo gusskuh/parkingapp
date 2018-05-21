@@ -1,21 +1,17 @@
 
-var prevPos = null;
-var currPos = null;
+// var prevPos = null;
+// var currPos = null;
 
-function getCurrPos(){
-  navigator.geolocation.getCurrentPosition(pos => {
-      document.querySelector('.cont').innerHTML =`<h1>your position is: ${pos.coords.latitude} | ${pos.coords.longitude}  </h1>`;      
-  })
-}
+// function getCurrPos(){
+//   navigator.geolocation.getCurrentPosition(pos => {
+//       document.querySelector('.cont').innerHTML =`<h1>your position is: ${pos.coords.latitude} | ${pos.coords.longitude}  </h1>`;      
+//   })
+// }
 
-getCurrPos();
+var map = new google.maps.Map(document.getElementById('map'), {
+  center: {lat: -34.397, lng: 150.644},
+  zoom: 8,
+});
 
 
-var x = 0 ;
-
-setInterval(() => {
-  console.log('lal');
-  x++;
-document.querySelector('.cont2').innerHTML = `<p>${x}</p>` 
-}, 1000);
 
