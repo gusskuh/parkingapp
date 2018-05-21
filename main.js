@@ -43,18 +43,19 @@ setInterval(function() {
       //   map: map,
       //   title: 'Hello World!'
       // });
+      document.querySelector('.userStatus').innerHTML= 'interval started after get curr pos';
       
-      origin1 = destinationB;
-      destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
+      // origin1 = destinationB;
+      // destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
       
-      service.getDistanceMatrix(
-        {
-          origins: [origin1],
-          destinations: [destinationB],
-          travelMode: "DRIVING"
-        },
-        callback
-      );
+      // service.getDistanceMatrix(
+      //   {
+      //     origins: [origin1],
+      //     destinations: [destinationB],
+      //     travelMode: "DRIVING"
+      //   },
+      //   callback
+      // );
     });
   }, 2000);
 
