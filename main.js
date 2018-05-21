@@ -34,6 +34,10 @@ function initMap() {
 
 document.querySelector('.userStatus').innerHTML='you are walking!';
 
+setTimeout(() => {
+  document.querySelector('.userStatus').innerHTML='you are driving!';
+}, 5000)
+
 
 // var service = new google.maps.DistanceMatrixService();
 // setInterval(() => {
