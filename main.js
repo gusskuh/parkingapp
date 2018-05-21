@@ -34,7 +34,7 @@ function initMap() {
 
 
 var service = new google.maps.DistanceMatrixService();
-
+setInterval(() => {
   navigator.geolocation.getCurrentPosition((pos, error, options) => {
     let crd = pos.coords;
     // var marker = new google.maps.Marker({
@@ -55,7 +55,7 @@ var service = new google.maps.DistanceMatrixService();
         callback
       );
     });
- 
+  }, 2000);
 
 function callback(response, status) {
   if (status == "OK") {
@@ -66,12 +66,12 @@ function callback(response, status) {
     // console.log("speed", speed);
 
     if (speed > 15) {
-      // console.log("your speed is over 15km/h");
-      document.querySelector('.userStatus').innerHTML= 'you are driving!';
+      console.log("your speed is over 15km/h");
+      // document.querySelector('.userStatus').innerHTML= 'you are driving!';
 
     } else {
-      // console.log("your speed is less than 15 km/h");
-      document.querySelector('.userStatus').innerHTML='you are walking!';
+      console.log("your speed is less than 15 km/h");
+      // document.querySelector('.userStatus').innerHTML='you are walking!';
     }
   }
 }
