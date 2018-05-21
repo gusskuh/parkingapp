@@ -8,20 +8,22 @@
     <title>Document</title>
     <style>
         #map {
-            height: 80%;
+            height: 90%;
         }
 
         html,
         body {
             height: 100%;
-            padding: 20px;
+            padding: 10px;
         }
     </style>
 </head>
 
-<body>
+<body onload="initMap()">
     <h1>Hello App!!!</h1>
-    <div id="map"></div>
+    <div id="map">
+        <h2 class="userStatus"></h2>
+    </div>
     <div class="cont"></div>
     <div class="cont2"></div>
     <h2 class="userStatus"></h2>
