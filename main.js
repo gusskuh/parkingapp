@@ -32,32 +32,38 @@ function initMap() {
   }
 }
 
+var x = 0;
+setInterval(function(){
+  x++;
+  document.querySelector('.userStatus').innerHTML= x;
+}, 1000)
+
 
 
 // var service = new google.maps.DistanceMatrixService();
-setInterval(function() {
-  navigator.geolocation.getCurrentPosition(function(pos, error, options) {
-    let crd = pos.coords;
-    // var marker = new google.maps.Marker({
-      //   position: {lat: crd.latitude, lng: crd.longitude},
-      //   map: map,
-      //   title: 'Hello World!'
-      // });
-      document.querySelector('.userStatus').innerHTML= 'interval started after get curr pos';
+// setInterval(function() {
+//   navigator.geolocation.getCurrentPosition(function(pos, error, options) {
+//     let crd = pos.coords;
+//     // var marker = new google.maps.Marker({
+//       //   position: {lat: crd.latitude, lng: crd.longitude},
+//       //   map: map,
+//       //   title: 'Hello World!'
+//       // });
+//       document.querySelector('.userStatus').innerHTML= 'interval started after get curr pos';
       
-      // origin1 = destinationB;
-      // destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
+//       // origin1 = destinationB;
+//       // destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
       
-      // service.getDistanceMatrix(
-      //   {
-      //     origins: [origin1],
-      //     destinations: [destinationB],
-      //     travelMode: "DRIVING"
-      //   },
-      //   callback
-      // );
-    });
-  }, 2000);
+//       // service.getDistanceMatrix(
+//       //   {
+//       //     origins: [origin1],
+//       //     destinations: [destinationB],
+//       //     travelMode: "DRIVING"
+//       //   },
+//       //   callback
+//       // );
+//     });
+//   }, 2000);
 
 function callback(response, status) {
   if (status == "OK") {
