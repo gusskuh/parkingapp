@@ -32,12 +32,15 @@ function initMap() {
   }
 }
 
-var x = 0;
-setInterval(function(){
-  x++;
-  document.querySelector('.userStatus').innerHTML= x;
-}, 1000)
+document.querySelector('.userStatus').innerHTML='you are walking!';
 
+
+
+var x = 0;
+  setInterval(function() {
+    x++;
+    document.querySelector('.userStatus').innerHTML=x;
+  },5000)
 
 
 // var service = new google.maps.DistanceMatrixService();
@@ -49,37 +52,36 @@ setInterval(function(){
 //       //   map: map,
 //       //   title: 'Hello World!'
 //       // });
-//       document.querySelector('.userStatus').innerHTML= 'interval started after get curr pos';
       
-//       // origin1 = destinationB;
-//       // destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
+//       origin1 = destinationB;
+//       destinationB = new google.maps.LatLng(crd.latitude, crd.longitude);
       
-//       // service.getDistanceMatrix(
-//       //   {
-//       //     origins: [origin1],
-//       //     destinations: [destinationB],
-//       //     travelMode: "DRIVING"
-//       //   },
-//       //   callback
-//       // );
+//       service.getDistanceMatrix(
+//         {
+//           origins: [origin1],
+//           destinations: [destinationB],
+//           travelMode: "DRIVING"
+//         },
+//         callback
+//       );
 //     });
 //   }, 2000);
 
-function callback(response, status) {
-  if (status == "OK") {
-    let dist = response.rows[0].elements[0].distance.value;
-    // console.log(response.rows[0].elements[0].distance.value);
+// function callback(response, status) {
+//   if (status == "OK") {
+//     let dist = response.rows[0].elements[0].distance.value;
+//     // console.log(response.rows[0].elements[0].distance.value);
 
-    let speed = dist / 1000 * 360;
-    // console.log("speed", speed);
+//     let speed = dist / 1000 * 360;
+//     // console.log("speed", speed);
 
-    if (speed > 15) {
-      // console.log("your speed is over 15km/h");
-      document.querySelector('.userStatus').innerHTML= 'you are driving!';
+//     if (speed > 15) {
+//       console.log("your speed is over 15km/h");
+//       // document.querySelector('.userStatus').innerHTML= 'you are driving!';
 
-    } else {
-      // console.log("your speed is less than 15 km/h");
-      document.querySelector('.userStatus').innerHTML='you are walking!';
-    }
-  }
-}
+//     } else {
+//       console.log("your speed is less than 15 km/h");
+//       // document.querySelector('.userStatus').innerHTML='you are walking!';
+//     }
+//   }
+// }
