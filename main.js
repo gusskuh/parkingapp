@@ -43,7 +43,7 @@ var x = 0;
   },5000)
 
 
-// var service = new google.maps.DistanceMatrixService();
+var service = new google.maps.DistanceMatrixService();
 // setInterval(function() {
 //   navigator.geolocation.getCurrentPosition(function(pos, error, options) {
 //     let crd = pos.coords;
